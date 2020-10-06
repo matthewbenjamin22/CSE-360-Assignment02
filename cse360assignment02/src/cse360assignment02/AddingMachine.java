@@ -9,48 +9,64 @@ package cse360assignment02;
 
 public class AddingMachine {
   private int total;
+  private String memory;
   
   /**
  *	Constructor 
+ *	Initializes values to a default
  */
-public AddingMachine () {
-    total = 0;  // not needed - included for clarity
-  }
+public AddingMachine () 
+{
+    total = 0;
+    memory = "0";
+}
   
   /**
  * Accessor method
  * @return total
  */
-public int getTotal () {
-    return 0;
-  }
+public int getTotal () 
+{
+    return total;
+}
   
   /**
- * Add method
+ * Adds value to total and updates operation in memory
  * @param value
  */
-public void add (int value) {
-  }
+public void add (int value) 
+{
+	total += value;
+	memory += " + " + value;
+}
 
   /**
- * Subtract Method
+ * Subtract value to total and updates operation in memory
  * @param value
  */
-public void subtract (int value) {
-  }
+public void subtract (int value) 
+{
+	total -= value;
+	memory += " - " + value;
+}
 
 /**
  * toString Method
  * @return the String result
  */
-public String toString () {
-    return "";
-  }
+public String toString () 
+{
+    return memory;
+}
 
   /**
  * Clear method
+ * Resets total and memory
  */
-public void clear() {
-  }
-   
+public void clear() 
+{
+	memory = "0";
+	total = 0;
+}
+
 }
